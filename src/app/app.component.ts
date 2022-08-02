@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ToDo } from './ToDo';
-import { toDos } from 'db.json';
-
+import toDos from 'db.json';
+import Observable from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { toDos } from 'db.json';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  toDos : ToDo[] = [];
+  toDos : {id: any,name:string,isCompleted:boolean}[]=toDos;
   newToDo : string;
 
   saveToDo(){
