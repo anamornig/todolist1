@@ -10,7 +10,7 @@
     </div>
     <table class="table table-striped">
       <tbody>
-        <tr *ngFor="let toDo of toDos; let i = index;">
+        <tr *ngFor="let toDo of toDoList; let i = index;">
           <th scope="row">{{i+1}}</th>
           <td class="{{(!toDo.isCompleted)?'done':''}}" (click)="done(i)">{{toDo.name}}</td>
           <td class="remove" (click)="remove(i)">X</td>
